@@ -3914,7 +3914,9 @@ let
 
   io = callPackage ../development/interpreters/io { };
 
-  j = callPackage ../development/interpreters/j {};
+  j7 = callPackage ../development/interpreters/j/j701.nix {};
+
+  j8 = callPackage ../development/interpreters/j/j803.nix {};
 
   jimtcl = callPackage ../development/interpreters/jimtcl {};
 
