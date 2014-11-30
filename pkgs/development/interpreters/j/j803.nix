@@ -47,11 +47,11 @@ stdenv.mkDerivation rec {
   src = byLinux {
     linux32 = fetch_j {
       bits = "32";
-      sha256 = "001v509phlsi0iqz5iz6xw3bzngixhn2i0bf03y9w936szj1rg01";
+      sha256 = "04ksc63zi29dl1pbz9zdn64b6lb3k01xz32xg6k5vhjd9ng8alkb";
     };
     linux64 = fetch_j {
       bits = "64";
-      sha256 = "01i4vdx6cmjnw0cqh2a491hnbkg3x7kcdish545jc12m18nba872";
+      sha256 = "1dv409blz2rpby94hdr7vi46y6gxniazln7vmb96w8r7r5pxxhxy";
     };
   };
 
