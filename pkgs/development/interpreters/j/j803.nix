@@ -1,4 +1,4 @@
-{ stdenv, fetchurl, libedit, makeWrapper }:
+{ stdenv, fetchurl, libedit, ncurses, makeWrapper }:
 let
   version = "803";
 
@@ -16,7 +16,7 @@ let
 
   bits = byLinux { linux64 = "64"; linux32 = "32"; };
 
-  libPath = stdenv.lib.makeLibraryPath [ stdenv.gcc.libc libedit2 ];
+  libPath = stdenv.lib.makeLibraryPath [ stdenv.gcc.libc ncurses libedit2 ];
 
   fixInterpreter = file: ''
     patchelf --interpreter "$(cat $NIX_GCC/nix-support/dynamic-linker)" ${file}
@@ -24,6 +24,7 @@ let
 
   fixRpath = file: ''
     patchelf --set-rpath ${libPath} ${file}
+    patchelf --remove-needed libtinfo.so.5 ${file}
   '';
 
   libedit2 = stdenv.mkDerivation rec {
