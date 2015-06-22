@@ -331,6 +331,7 @@
   ./services/networking/xinetd.nix
   ./services/networking/znc.nix
   ./services/printing/cupsd.nix
+  ./services/queue/beanstalkd.nix
   ./services/scheduling/atd.nix
   ./services/scheduling/chronos.nix
   ./services/scheduling/cron.nix
