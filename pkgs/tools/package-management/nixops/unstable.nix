@@ -17,13 +17,13 @@ let
 in
 
 pythonPackages.buildPythonPackage rec {
-  name = "nixops-1.3pre1362_2a616f8";
+  name = "nixops-1.3pre1489_1dba98b";
   namePrefix = "";
 
   src = fetchgit {
     url = https://github.com/NixOS/nixops;
-    rev = "2a616f8ddc18800c9e1c7013632078a55c06c3e3";
-    sha256 = "12arppri2j9sblja73jlfdcbpz1z94cd35n9ypazcsw4irmya3k6";
+    rev = "1dba98b644fa53901d06cd7761e3ebca1b30a5e8";
+    sha256 = "0yd3a1k9r6zm3gjbfdazvwjjza0129m66q4x9gq5zj3axin9na88";
   };
 
   buildInputs = [ pythonPackages.nose pythonPackages.coverage ];
